@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "discount-extension"
+client_id = "d9c05318d83ae92a3df82bd32926df09"
+application_url = "https://lovers-naturally-guilty-lovers.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products, write_discounts, read_checkouts, write_checkouts, read_products, write_products, read_cart_transforms, write_cart_transforms"
+
+[auth]
+redirect_urls = [
+  "https://lovers-naturally-guilty-lovers.trycloudflare.com/auth/callback",
+  "https://lovers-naturally-guilty-lovers.trycloudflare.com/auth/shopify/callback",
+  "https://lovers-naturally-guilty-lovers.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "gina-test-store123.myshopify.com"
